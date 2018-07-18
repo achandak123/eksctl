@@ -373,7 +373,7 @@ func (c *ClusterProvider) createStackDefaultNodeGroup(errs chan error) error {
 		c.cfg.nodeInstanceRoleARN = *nodeInstanceRoleARN
 
 		logger.Debug("clusterConfig = %#v", c.cfg)
-		logger.Success("created DefaultNodeGroup stack %q", name)
+		logger.Success("created DefaultNodeGroup stack %q, instanceRoleARN %s", name, c.cfg.nodeInstanceRoleARN)
 
 		errs <- nil
 	}()
