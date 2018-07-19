@@ -265,7 +265,7 @@ func (c *ClusterProvider) createStackServiceRole(errs chan error) error {
 		c.cfg.clusterRoleARN = *clusterRoleARN
 
 		logger.Debug("clusterConfig = %#v", c.cfg)
-		logger.Success("created ServiceRole stack %q, roleARN %s", name, c.cfg.clusterRoleARN)
+		logger.Success("created ServiceRole stack %q", name)
 
 		errs <- nil
 	}()
